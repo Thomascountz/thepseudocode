@@ -54,6 +54,7 @@ $breakpoint-large: 60em; // 960px
 .banner {
   background: url('../images/abstract.png');
   color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
   font-size: 200%;
   font-weight: 900;
