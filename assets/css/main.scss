@@ -1,11 +1,74 @@
 ---
 ---
 
-@import "github-syntax-highlighting";
+@import 'github-syntax-highlighting';
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/merriweather/Merriweather-Regular.otf') format('OpenType');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/merriweather/Merriweather-Light.otf') format('OpenType');
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/merriweather/Merriweather-LightItalic.otf')
+    format('OpenType');
+  font-style: italic;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/merriweather/Merriweather-Black.otf') format('OpenType');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/merriweather/Merriweather-Italic.otf') format('OpenType');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/merriweather/Merriweather-BlackItalic.otf')
+    format('OpenType');
+  font-style: italic;
+  font-weight: bold;
+}
+
+$breakpoint-small: 33.75em; // 540px
+$breakpoint-med: 45em; // 720px
+$breakpoint-large: 60em; // 960px
+
+.banner {
+  background: url('../images/abstract.png');
+  color: transparent;
+  background-clip: text;
+  font-size: 200%;
+  font-weight: 900;
+  margin: 0 auto;
+  @media only screen and (min-width: $breakpoint-med) {
+    font-size: 500%;
+  }
+  @media only screen and (min-width: $breakpoint-large) {
+    font-size: 800%;
+  }
+}
 
 .nav {
   list-style-type: none;
-  text-align: right; 
+  text-align: right;
   padding: 0;
   margin: 0;
 }
@@ -20,7 +83,9 @@ img {
 }
 
 footer {
-  margin-top: 5rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   ul {
     list-style-type: none;
   }
@@ -36,4 +101,14 @@ figure {
 
 figcaption {
   margin: 3% 0;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+
+.content {
+  min-height: 100vh; /* will cover the 100% of viewport */
 }
