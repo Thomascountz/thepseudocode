@@ -4,42 +4,53 @@ title: The Pseudocode
 permalink: /
 ---
 
-<div class="content">
-  {% include banner.html %}
-  <div class="row">
-    <div class="col-3"></div>
-    <div class="col-6">
-      <h2 class="center">A Tech Podcast For Your Eyes*</h2>
-      <p class="center">
-        Subsribe to receive the monthly iteration.
-      </p>
+{% include banner.html %}
+<div class="row" style="min-height:100vh;">
+  <div class="col-3"></div>
+  <div class="col-6">
+    <h2 class="center">A Tech Podcast For Your Eyes*</h2>
+    <p class="center">
+    Subsribe to receive the monthly iteration.
+    </p>
 
-      <form
-        name="show interest"
-        action="https://tinyletter.com/thomascountz"
-        method="post"
-        target="popupwindow"
-        onsubmit="window.open('https://tinyletter.com/thomascountz', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+    <form
+      name="show interest"
+      action="https://tinyletter.com/thomascountz"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://tinyletter.com/thomascountz', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
       >
-        <div style="display: flex; height:46px;">
-          <input
-            type="text"
-            name="email"
-            required
-            id="tlemail"
-            placeholder="Email Address"
-            style="width: 70%; font-size: inherit; background: #e9e9eb; text-indent: 5%; border-radius: 5px 0 0 5px; border: none;"
+      <div style="display: flex; height:46px;">
+        <input
+          type="text"
+          name="email"
+          required
+          id="tlemail"
+          placeholder="Email Address"
+          style="width: 70%; font-size: inherit; background: #e9e9eb; text-indent: 5%; border-radius: 5px 0 0 5px; border: none;"
           />
-          <input type="hidden" value="1" name="embed" />
-          <button
-            type="submit"
-            style="width: 30%; background: #0b5394; color: #ffffff; border-radius: 0 5px 5px 0; cursor: pointer; border: none;"
+        <input type="hidden" value="1" name="embed" />
+        <button
+          type="submit"
+          style="width: 30%; background: #0b5394; color: #ffffff; border-radius: 0 5px 5px 0; cursor: pointer; border: none;"
           >
-            Submit
-          </button>
-        </div>
-      </form>
-      <p class="font-light text-small">*Not an actual podcast. It's an email newsletter!</p>
-    </div>
+          Submit
+        </button>
+      </div>
+    </form>
+    <p class="font-light text-small">
+    *Not an actual podcast. It's an email newsletter!
+    </p>
+    <h1 class="center banner" style="font-size:800%;">↓<h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <h1 class="center">Let's Chat!</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    {% include utterances.html %}
   </div>
 </div>

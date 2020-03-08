@@ -67,6 +67,16 @@ $breakpoint-large: 60em; // 960px
   }
 }
 
+.banner-jr {
+  background: url('../images/abstract.png');
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 200%;
+  font-weight: 900;
+  margin: 0 auto;
+}
+
 .nav {
   list-style-type: none;
   text-align: right;
@@ -84,12 +94,7 @@ img {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  ul {
-    list-style-type: none;
-  }
 }
 
 ul {
@@ -108,8 +113,4 @@ html,
 body {
   height: 100%;
   position: relative;
-}
-
-.content {
-  min-height: 100vh; /* will cover the 100% of viewport */
 }
