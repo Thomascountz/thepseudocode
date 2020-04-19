@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    {% include twitter-meta-tags.html %}
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/simple-grid.css" | relative_url }}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          {% include header.html %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h1>{{ page.title }}</h1>
+          {% if page.author %}
+            <h3 class="font-light">✍️ {{ page.author }}</h3>
+          {% endif %}
+          {{ content}}
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-12">
+          <h2 id="discussion"> Discussion </h2>
+          {% include utterances.html %}
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

@@ -4,3 +4,14 @@ title: "The Pseudocode" # the name of your site, e.g. ACME Corp.
 description: "A tech podcast for your eyes!"
 makrdown: kramdown
 highlighter: rouge
+collections:
+  "001":
+    output: true
+    permalink: /001/:title/
+    order:
+      - why-i-share-the-agenda.md
+      - can-teamwork-work-when-a-team-at-work-doesnt-work.md
+      - range-of-tolerance.md
+      - the_broom.md
+      - precommitments.md
+      - reading-assignment.md
